@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Niyam Savale</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7fa;
+            color: #1e293b;
+        }
+
+        /* Navbar */
+        nav {
+            background: #0f172a;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            color: #f97316;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #0f172a, #1e3a8a);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .hero span {
+            color: #f97316;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin-bottom: 25px;
+        }
+
+        button {
+            background: #f97316;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #ea580c;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 8%;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 35px;
+            font-size: 32px;
+        }
+
+        .about {
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.7;
+        }
+
+        /* Services */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+            color: #0f172a;
+        }
+
+        .card p {
+            color: #64748b;
+            line-height: 1.5;
+        }
+
+        /* Contact */
+        .contact {
+            text-align: center;
+            background: #e2e8f0;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 800px) {
+            .services {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <h2>Rohit Upadhye</h2>
+
+        <div>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <h1>We Vision <span>Inspiration</span></h1>
+
+        <p>
+            Niyam is a CSE student working at VSpireInnovations
+        </p>
+
+        <button onclick="showMessage()">
+            Explore More
+        </button>
+
+    </section>
+
+    <!-- About -->
+    <section id="about">
+
+        <h2>About Us</h2>
+
+        <div class="about">
+
+            <p>
+                VSpireInnovations is a technology company focused on
+                building modern software solutions and providing
+                industry-oriented technical training.
+            </p>
+
+            <br>
+
+            <p>
+                We work across Artificial Intelligence, Data Science,
+                DevOps, MLOps and Full Stack Development.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+
+        <h2>Our Services</h2>
+
+        <div class="services">
+
+            <div class="card">
+                <h3>AI & ML</h3>
+                <p>
+                    Artificial Intelligence and Machine Learning
+                    solutions for real-world applications.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Data Science</h3>
+                <p>
+                    Data analytics, visualization and
+                    machine learning solutions.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>DevOps & MLOps</h3>
+                <p>
+                    CI/CD, Docker, Kubernetes, cloud deployment
+                    and ML automation.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Full Stack</h3>
+                <p>
+                    Modern frontend and backend application
+                    development.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>
+            Email: info@vspireinnovations.com
+        </p>
+
+        <br>
+
+        <button onclick="contactMessage()">
+            Contact Us
+        </button>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 VSpireInnovations. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script>
+
+        function showMessage() {
+            alert("Welcome to VSpireInnovations!");
+        }
+
+        function contactMessage() {
+            alert("Thank you for contacting VSpireInnovations!");
+        }
+
+    </script>
+
+</body>
+</html>
